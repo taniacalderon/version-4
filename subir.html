@@ -1,0 +1,25 @@
+<?php
+include ("../../configuracion/conexion-usuario.php");
+include ("../../_php/conexion.php");
+
+$imagen=$_FILES["imagen"]["name"];
+$destino="imagen-destinos/$imagen";
+
+if (is_uploaded_file ($_FILES['imagen']['tmp_name']) && ($_FILES['imagen']['type']=='image/jpg' || $_FILES['imagen']['type']=="image/pjpeg" )
+){
+move_uploaded_file ($_FILES['imagen']['tmp_name'], "../$destino");
+move_uploaded_file ($_FILES['imagen']['tmp_name'], "../../$destino");
+
+$orden="INSERT INTO imagenes_destino (imagen) values ('$destino')";
+$rs=mysql_query($orden, $conn); 
+header("location:../paginas/imagenes-destino.php");
+
+}else{
+echo "la imagen debe ser jpg";
+}
+
+
+
+
+
+?>

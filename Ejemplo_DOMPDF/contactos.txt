@@ -1,0 +1,2 @@
+id_cliente contacto 1|nombre contacto 1|password contacto 1|N_documento contacto 1|telefono contacto 1|direccion contacto 1|correocontacto 1
+id_cliente contacto 1|nombre contacto 1|password contacto 1|N_documento contacto 1|telefono contacto 1|direccion contacto 1|correocontacto 1
